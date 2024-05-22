@@ -1,0 +1,2 @@
+aiotruenas-client==0.10.0
+argparse==1.4.0
