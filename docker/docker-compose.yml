@@ -1,0 +1,10 @@
+version: '3'
+services:
+  truenas-power-manager:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    container_name: truenas-power-manager
+    volumes:
+      - ../config:/app/config
+    restart: unless-stopped

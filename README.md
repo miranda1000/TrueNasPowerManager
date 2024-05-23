@@ -11,13 +11,16 @@ For any of the following sections, you'll need [Docker](https://docs.docker.com/
 
 ### Run
 
-TODO
+- Go to the `docker` directory and run `docker compose up -d`
+
+> Note for developers: to try new code, remove the `-d` and add `--build`.
 
 ### Running the tests
 
 If you'd like to run the test, you'll have to run the following command:
 
 TODO
+
 
 ## Instructions for local
 
