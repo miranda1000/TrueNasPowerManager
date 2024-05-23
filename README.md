@@ -19,7 +19,7 @@ For any of the following sections, you'll need [Docker](https://docs.docker.com/
 
 If you'd like to run the test, you'll have to run the following command:
 
-TODO
+- Go to the `tests/docker` directory and run `docker compose up --build`
 
 
 ## Instructions for local
