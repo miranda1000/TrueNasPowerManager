@@ -1,4 +1,4 @@
-from ..entities.time.TimeInterval import TimeInterval
+from entities.time.TimeInterval import TimeInterval
 
 class ConfigProvider:
     @property
