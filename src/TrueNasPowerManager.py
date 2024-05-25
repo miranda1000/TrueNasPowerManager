@@ -24,18 +24,19 @@ class TrueNasPowerManager:
             print("[w] You have to set the TrueNAS API key. Check the config file and launch the program again.")
             exit(1)
 
-        print("[i] Connecting to TrueNAS...")
-        self.__machine = self.__get_machine()
-        print("[i] Connected to TrueNAS.")
-
         while True:
-            processing_jobs = self.__machine.processing_jobs
+            try:
+                with self.__get_machine() as machine:
+                    processing_jobs = machine.processing_jobs
 
-            # TODO temporal
-            #await asyncio.sleep(5)
+                    #machine.shutdown() # stop the machine
+            except Exception as ex:
+                print("[e] Got an exception while trying to run commands, is the server down? Will try again later.")
+                print("[e] " + str(ex))
 
-            #self.__machine.shutdown() # stop the machine
-            break
+            #await asyncio.sleep(5) # TODO temporal
+
+            break # TODO temporal
 
     def sync_run(self):
         """
