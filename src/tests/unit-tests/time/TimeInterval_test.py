@@ -1,8 +1,8 @@
 import pytest
 import unittest
-from src.entities.time.TimeInterval import TimeInterval
-from src.entities.time.Hour import Hour
-from src.entities.time.HourFactory import HourFactory
+from entities.time.TimeInterval import TimeInterval
+from entities.time.Hour import Hour
+from entities.time.HourFactory import HourFactory
 
 def test_time_interval_should_save_a_time_interval():
     start = Hour(hour=1, minute=0, second=0)

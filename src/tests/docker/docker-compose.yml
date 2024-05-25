@@ -2,6 +2,6 @@ version: '3'
 services:
   truenas-power-manager-tests:
     build:
-      context: ../../
-      dockerfile: ./tests/docker/Dockerfile
+      context: ../../../
+      dockerfile: ./src/tests/docker/Dockerfile
     container_name: truenas-power-manager-tests

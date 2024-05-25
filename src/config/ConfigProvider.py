@@ -12,3 +12,7 @@ class ConfigProvider:
     @property
     def check_interval(self) -> TimeInterval:
         pass
+
+    @property
+    def polling_time(self) -> float:
+        pass

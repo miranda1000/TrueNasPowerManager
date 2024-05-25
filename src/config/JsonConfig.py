@@ -23,7 +23,8 @@ class JsonConfig(ConfigProvider):
             'check_interval': {
                 'start': '01:00:00',
                 'end': '08:00:00'
-            }
+            },
+            'polling_time': 120
         }
 
     def create(self):
@@ -66,3 +67,9 @@ class JsonConfig(ConfigProvider):
         end = self._data['check_interval']['start']
 
         return TimeInterval(start,end)
+
+    @property
+    def polling_time(self) -> float:
+        if self._data is None:
+            raise Exception("You have to call `read` first")
+        return float(self._data['polling_time'])
