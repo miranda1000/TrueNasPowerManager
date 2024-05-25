@@ -64,7 +64,7 @@ class JsonConfig(ConfigProvider):
         if self._data is None:
             raise Exception("You have to call `read` first")
         start = self._data['check_interval']['start']
-        end = self._data['check_interval']['start']
+        end = self._data['check_interval']['end']
 
         return TimeInterval(start,end)
 

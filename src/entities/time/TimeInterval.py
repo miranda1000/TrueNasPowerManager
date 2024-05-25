@@ -31,3 +31,6 @@ class TimeInterval:
             time = HourFactory.parse_hour(time)
 
         return time >= self._start and time <= self._end
+
+    def __repr__(self) -> str:
+        return f"TimeInterval({self._start},{self._end})"
