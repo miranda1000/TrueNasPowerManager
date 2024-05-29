@@ -7,4 +7,5 @@ services:
     container_name: truenas-power-manager
     volumes:
       - ../config:/app/config
+      - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
